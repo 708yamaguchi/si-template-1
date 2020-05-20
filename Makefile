@@ -38,7 +38,7 @@ install:
 ifndef LATEXMK
 	@echo 'installing components...'
 ifeq ($(OS), Linux)
-	sudo apt install -y -qq texlive texlive-lang-cjk texlive-science texlive-fonts-recommended texlive-fonts-extra xdvik-ja gv latexmk
+	sudo apt install -y -qq texlive texlive-lang-cjk texlive-science texlive-fonts-recommended texlive-fonts-extra xdvik-ja texlive-binaries gv latexmk
 endif
 ifeq ($(OS), Darwin)
 	brew tap caskroom/cask && brew cask install -v mactex && sudo tlmgr update --self --all
